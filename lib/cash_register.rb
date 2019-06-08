@@ -2,8 +2,6 @@ class CashRegister
   
   attr_accessor :discount, :total 
   
-  
-  
   def initialize(discount = 0)
     @total = 0 
     @discount = discount
@@ -15,7 +13,6 @@ class CashRegister
     @total += price * quantity
     quantity.times {@items << title}
     @last_transaction = price * quantity
-    
   end
   
   def apply_discount
@@ -25,7 +22,6 @@ class CashRegister
     else
       "There is no discount to apply."
     end
-  
   end
   
   def items
